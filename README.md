@@ -119,7 +119,7 @@ I have deployed this project using: Github pages
 - Twitter: [@twitterhandle](https://twitter.com/sana_tameem)
 - LinkedIn: [LinkedIn](http://linkedin.com/in/sana-tameem-a63b55240)
 
-👤 **Author2**
+👤 **Ochieng Steven**
 
 - GitHub: [@githubhandle](https://github.com/Ochiengsteven)
 - Twitter: [@twitterhandle](Ochiengsteven)
