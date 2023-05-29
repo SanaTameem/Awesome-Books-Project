@@ -48,8 +48,6 @@ This project is created using JavaScript objects and DOM.
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[Adding Book]**
 - **[Removing Book]**
 - **[Storing the list of books in local storage]**
