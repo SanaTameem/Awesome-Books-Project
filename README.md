@@ -86,7 +86,6 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone https://github.com/SanaTameem/Awesome-Books-Project.git
 ```
---->
 
 ### Install
 
