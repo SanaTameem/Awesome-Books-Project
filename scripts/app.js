@@ -35,6 +35,26 @@ function displayBook() {
   });
 }
 // add Book function
-
+function addBook() {
+  const bookId = new Date().getTime().toString();
+  const titleValue = titleInput.value;
+  const authorValue = authorInput.value;
+  if (listOfbooks.lenght === 0) {
+    listOfbooks.style.display = 'none';
+  }
+  if (titleValue && authorValue) {
+    const book = {
+      id: bookId,
+      title: titleValue,
+      author: authorValue,
+    };
+    listOfbooks.innerHTML = '';
+    arrayOfBooks.push(book);
+    displayBook();
+    titleInput.value = '';
+    authorInput.value = '';
+    localStorage.setItem('arrayOfBook', JSON.stringify(arrayOfBooks));
+  }
+}
 // event listeners
 window.addEventListener('DOMContentLoaded', displayBook);
