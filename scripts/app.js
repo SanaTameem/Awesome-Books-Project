@@ -58,3 +58,4 @@ function addBook() {
 }
 // event listeners
 window.addEventListener('DOMContentLoaded', displayBook);
+addBtn.addEventListener('click', addBook);
