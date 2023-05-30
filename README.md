@@ -81,7 +81,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd my-folder
+  cd your_folder
   git clone https://github.com/SanaTameem/Awesome-Books-Project.git
 ```
 

@@ -7,7 +7,6 @@ let arrayOfBooks = JSON.parse(localStorage.getItem('arrayOfBook')) || [];
 // Remove book function
 function removeBook(e) {
   const artcl = e.currentTarget.parentElement;
-  //   const articleId = e.currentTarget.parentElement.dataset.id;
   listOfbooks.removeChild(artcl);
   arrayOfBooks = arrayOfBooks.filter((item) => item.id !== artcl.dataset.id);
   localStorage.setItem('arrayOfBook', JSON.stringify(arrayOfBooks));
