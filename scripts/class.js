@@ -14,7 +14,6 @@ class Book {
   // Remove book function
   removeBook(e) {
     const artcl = e.currentTarget.parentElement;
-    //   const articleId = e.currentTarget.parentElement.dataset.id;
     this.listOfbooks.removeChild(artcl);
     this.arrayOfBooks = this.arrayOfBooks.filter((item) => item.id !== artcl.dataset.id);
     localStorage.setItem('arrayOfBook', JSON.stringify(this.arrayOfBooks));
