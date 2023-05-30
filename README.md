@@ -120,8 +120,8 @@ I have deployed this project using: Github pages
 👤 **Ochieng Steven**
 
 - GitHub: [@githubhandle](https://github.com/Ochiengsteven)
-- Twitter: [@twitterhandle](Ochiengsteven)
-- LinkedIn: [LinkedIn](Ochiengsteven)
+- Twitter: [@twitterhandle](https://twitter.com/legringo_madd)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/steven-ochieng-a43125179/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
