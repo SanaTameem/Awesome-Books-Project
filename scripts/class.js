@@ -46,7 +46,27 @@ class Book {
   }
 
   // add Book function
-
+  addBook() {
+    const bookId = new Date().getTime().toString();
+    const titleValue = this.titleInput.value;
+    const authorValue = this.authorInput.value;
+    if (this.listOfbooks.lenght === 0) {
+      this.listOfbooks.style.display = 'none';
+    }
+    if (titleValue && authorValue) {
+      const book = {
+        id: bookId,
+        title: titleValue,
+        author: authorValue,
+      };
+      this.listOfbooks.innerHTML = '';
+      this.arrayOfBooks.push(book);
+      this.displayBook();
+      this.titleInput.value = '';
+      this.authorInput.value = '';
+      localStorage.setItem('arrayOfBook', JSON.stringify(this.arrayOfBooks));
+    }
+  }
 }
 
 const booklist = new Book();
