@@ -58,7 +58,7 @@ This project is created using JavaScript objects and DOM.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://sanatameem.github.io/Awesome-Books-Project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
