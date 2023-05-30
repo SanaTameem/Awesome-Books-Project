@@ -27,8 +27,6 @@
   align-items: center;
 }
 
-
-
 .list-of-books {
   display: none;
   border: 3px solid #000;
@@ -52,7 +50,6 @@
   justify-content: space-between;
   padding: 0 12px;
 }
-
 
 .underline {
   width: 20%;
