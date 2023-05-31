@@ -4,24 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Books with Classes</title>
+    <title>Awesome Books</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">All Awesome Books</h1>
-        <div class="list-of-books">
+    <header>
+        <nav class="navbar">
+            <div class="title-icon">Awesome Books</div>
+            <ul class="nav-list">
+                <li class="nav-item list-show">List</li>
+                <li class="nav-item  bordered add-new">Add New</li>
+                <li class="nav-item contact">Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="date"></div>
+    <div class="main-container">
+        <div class="list-container">
+            <h1 class="title">All Awesome Books</h1>
+            <div class="list-of-books">
+            <!-- <hr class="underline"> -->
+            </div>
         </div>
-        <hr class="underline">
+       
         <div class="form-container">
-            <h2>Add a new book</h2>
+            <h2 class="title">Add a new book</h2>
             <form class="form">
                 <input type="text" class="title-input" placeholder="Title">
                 <input type="text" class="author-input" placeholder="Author">
                 <button class="add-btn" type="button">Add</button>
             </form>
         </div>
+
+        <div class="contact-container">
+            <h2 class="title">Contact Information</h2>
+            <div class="contact-data">
+                Do you have any question or you only want to say "Hello"?<br>
+                You can reach out to us:
+                <ul class="contact-data-parts">
+                    <li class="con-data">Our email : <a href="mailto:sanatameem38@gmail.com">sanatameem38@gmail.com</a></li>
+                    <li class="con-data">Our phone number : 0123456789</li>
+                    <li class="con-data">Our address : 3rd-region-Street Kabul city Afghanistan</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <script src="./scripts/class.js"></script>
+    <div class="footer">©2023 All rights reserved. Discover the magic within these pages.</div>
+    
+
+    <script src="./scripts/navigation.js"></script>
 </body>
 </html>
