@@ -3,7 +3,19 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container {
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.date {
+  align-self: flex-end;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.main-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -16,24 +28,42 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  gap: 10px;
+  gap: 30px;
 }
 
 .form-container {
+  display: none;
   flex-direction: column;
   width: 70%;
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.add-btn {
+  align-self: flex-end;
+  background: none;
+  width: 15%;
+  height: 25px;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 3px #000;
 }
 
 .list-of-books {
   display: none;
   border: 3px solid #000;
   width: 50%;
+  margin-bottom: 40px;
+}
+
+.list-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .title {
+  font-size: 35px;
   text-align: center;
 }
 
@@ -49,6 +79,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 12px;
+}
+
+.remove-btn {
+  height: 30px;
+  width: 15%;
+  background: none;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 3px #000;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .underline {
@@ -70,23 +110,66 @@
 .author-input {
   border: 3px solid #000;
   padding: 5px;
+  height: 45px;
 }
 
-.remove-btn {
-  height: 30px;
-  width: 15%;
-  background: none;
-  border: 2px solid #000;
-  box-shadow: 3px 3px 3px #000;
-  font-size: 17px;
+.bordered {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.title-icon {
+  font-size: 18px;
   font-weight: 600;
 }
 
-.add-btn {
-  align-self: flex-end;
-  background: none;
-  width: 15%;
-  height: 25px;
+.footer {
+  padding: 5px 15px;
   border: 3px solid #000;
-  box-shadow: 3px 3px 3px #000;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 2px;
+  background-color: #fff;
+}
+
+.contact-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-data {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.show {
+  display: flex;
+}
+
+.navbar {
+  margin: 4px;
+  padding: 0 15px;
+  border: 3px solid #000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  width: 20%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  padding: 0 10px;
+  font-weight: 600;
+  cursor: pointer;
 }

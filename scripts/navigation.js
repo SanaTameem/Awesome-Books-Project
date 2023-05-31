@@ -9,6 +9,72 @@ class Book {
     this.listOfbooks = document.querySelector('.list-of-books');
     this.arrayOfBooks = JSON.parse(localStorage.getItem('arrayOfBook')) || [];
     this.addBtn.addEventListener('click', this.addBook.bind(this));
+    this.mainContainer = document.querySelector('.main-container');
+    // containers
+    this.container = document.querySelector('.list-container');
+    this.formContainer = document.querySelector('.form-container');
+    this.contactContainer = document.querySelector('.contact-container');
+    // nav items
+    this.listShow = document.querySelector('.list-show');
+    this.addNew = document.querySelector('.add-new');
+    this.contact = document.querySelector('.contact');
+    // nav event listeners
+    this.listShow.addEventListener('click', this.showList.bind(this));
+    this.addNew.addEventListener('click', this.showNew.bind(this));
+    this.contact.addEventListener('click', this.showContact.bind(this));
+  }
+
+  showList() {
+    this.container.classList.add('show');
+    this.formContainer.classList.remove('show');
+    this.contactContainer.classList.remove('show');
+  }
+
+  showNew() {
+    this.formContainer.classList.add('show');
+    this.container.classList.remove('show');
+    this.contactContainer.classList.remove('show');
+  }
+
+  showContact() {
+    this.contactContainer.classList.add('show');
+    this.formContainer.classList.remove('show');
+    this.container.classList.remove('show');
+  }
+
+  // date and time function
+  updateTime() {
+    const date = new Date();
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = months[date.getMonth()];
+    const day = date.getDate();
+    let daySuffix;
+    switch (day % 10) {
+      case 1:
+        daySuffix = 'st';
+        break;
+      case 2:
+        daySuffix = 'nd';
+        break;
+      case 3:
+        daySuffix = 'rd';
+        break;
+      default:
+        daySuffix = 'th';
+    }
+    const year = date.getFullYear();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+    const amPm = hour >= 12 ? 'pm' : 'am';
+    hour %= 12;
+    hour = hour || 12;
+    minute = minute < 10 ? `0${minute}` : minute;
+    second = second < 10 ? `0${second}` : second;
+    const time = `${month} ${day}${daySuffix} ${year}, ${hour}:${minute}:${second} ${amPm}`;
+    const timeElement = document.querySelector('.date');
+    timeElement.innerHTML = time;
+    setInterval(this.updateTime, 1000);
   }
 
   // Remove book function
@@ -41,6 +107,7 @@ class Book {
       removeBtn.forEach((btn) => {
         btn.addEventListener('click', this.removeBook.bind(this));
       });
+      this.container.classList.add('show');
     });
   }
 
@@ -65,8 +132,10 @@ class Book {
       this.authorInput.value = '';
       localStorage.setItem('arrayOfBook', JSON.stringify(this.arrayOfBooks));
     }
+    this.container.classList.remove('show');
   }
 }
 
 const booklist = new Book();
 window.addEventListener('DOMContentLoaded', booklist.displayBook());
+document.body.addEventListener('onload', booklist.updateTime());

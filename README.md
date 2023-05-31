@@ -129,7 +129,7 @@ I have deployed this project using: Github pages
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Creating a complete website with navigation]**
+- [ ] **[Making the website more responsive.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
