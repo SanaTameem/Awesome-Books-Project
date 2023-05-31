@@ -22,9 +22,9 @@ class Book {
     this.listShow.addEventListener('click', this.showList.bind(this));
     this.addNew.addEventListener('click', this.showNew.bind(this));
     this.contact.addEventListener('click', this.showContact.bind(this));
-    this.monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+    /* this.monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December',
-    ];
+    ]; */
   }
 
   showList() {
@@ -45,7 +45,7 @@ class Book {
     this.container.classList.remove('show');
   }
 //date and time function
- timeDate() {
+/* timeDate() {
     const x = new Date();
     const amOrpm = x.getHours() >= 12 ? ' PM' : ' AM';
     const addZeroToSec = x.getSeconds() < 10 ? `0${x.getSeconds()}` : x.getSeconds();
@@ -55,7 +55,43 @@ class Book {
     x1 = `${x1} ${addZeroToHour}:${addZeroToMin}:${addZeroToSec}${amOrpm}`;
     document.querySelector('.date').innerHTML = x1;
     setTimeout(() => { this.timeDate(); }, 1000);
+  } */
+  updateTime() {
+    const date = new Date();
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = months[date.getMonth()];
+    const day = date.getDate();
+    let daySuffix;
+    switch (day % 10) {
+      case 1:
+        daySuffix = 'st';
+        break;
+      case 2:
+        daySuffix = 'nd';
+        break;
+      case 3:
+        daySuffix = 'rd';
+        break;
+      default:
+        daySuffix = 'th';
+    }
+    const year = date.getFullYear();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+    const amPm = hour >= 12 ? 'pm' : 'am';
+    hour %= 12;
+    hour = hour || 12;
+    minute = minute < 10 ? `0${minute}` : minute;
+    second = second < 10 ? `0${second}` : second;
+    const time = `${month} ${day}${daySuffix} ${year}, ${hour}:${minute}:${second} ${amPm}`;
+    const timeElement = document.querySelector('.date');
+    timeElement.innerHTML = time;
+    setInterval(this.updateTime, 1000);
   }
+  
+  // updateTime();
+  
 
   // Remove book function
   removeBook(e) {
@@ -118,4 +154,4 @@ class Book {
 
 const booklist = new Book();
 window.addEventListener('DOMContentLoaded', booklist.displayBook());
-document.body.addEventListener('onload', booklist.timeDate());
+document.body.addEventListener('onload', booklist.updateTime());
