@@ -22,9 +22,6 @@ class Book {
     this.listShow.addEventListener('click', this.showList.bind(this));
     this.addNew.addEventListener('click', this.showNew.bind(this));
     this.contact.addEventListener('click', this.showContact.bind(this));
-    /* this.monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December',
-    ]; */
   }
 
   showList() {
@@ -44,18 +41,8 @@ class Book {
     this.formContainer.classList.remove('show');
     this.container.classList.remove('show');
   }
-//date and time function
-/* timeDate() {
-    const x = new Date();
-    const amOrpm = x.getHours() >= 12 ? ' PM' : ' AM';
-    const addZeroToSec = x.getSeconds() < 10 ? `0${x.getSeconds()}` : x.getSeconds();
-    const addZeroToMin = x.getMinutes() < 10 ? `0${x.getMinutes()}` : x.getMinutes();
-    const addZeroToHour = x.getHours() < 10 ? `0${x.getHours()}` : x.getHours();
-    let x1 = `${this.monthNames[x.getMonth()]} ${x.getDate()}th ${x.getFullYear()}, `;
-    x1 = `${x1} ${addZeroToHour}:${addZeroToMin}:${addZeroToSec}${amOrpm}`;
-    document.querySelector('.date').innerHTML = x1;
-    setTimeout(() => { this.timeDate(); }, 1000);
-  } */
+
+  // date and time function
   updateTime() {
     const date = new Date();
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -89,9 +76,6 @@ class Book {
     timeElement.innerHTML = time;
     setInterval(this.updateTime, 1000);
   }
-  
-  // updateTime();
-  
 
   // Remove book function
   removeBook(e) {
