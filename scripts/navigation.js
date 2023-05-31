@@ -45,7 +45,17 @@ class Book {
     this.container.classList.remove('show');
   }
 //date and time function
- 
+ timeDate() {
+    const x = new Date();
+    const amOrpm = x.getHours() >= 12 ? ' PM' : ' AM';
+    const addZeroToSec = x.getSeconds() < 10 ? `0${x.getSeconds()}` : x.getSeconds();
+    const addZeroToMin = x.getMinutes() < 10 ? `0${x.getMinutes()}` : x.getMinutes();
+    const addZeroToHour = x.getHours() < 10 ? `0${x.getHours()}` : x.getHours();
+    let x1 = `${this.monthNames[x.getMonth()]} ${x.getDate()}th ${x.getFullYear()}, `;
+    x1 = `${x1} ${addZeroToHour}:${addZeroToMin}:${addZeroToSec}${amOrpm}`;
+    document.querySelector('.date').innerHTML = x1;
+    setTimeout(() => { this.timeDate(); }, 1000);
+  }
 
   // Remove book function
   removeBook(e) {
