@@ -9,7 +9,43 @@ class Book {
     this.listOfbooks = document.querySelector('.list-of-books');
     this.arrayOfBooks = JSON.parse(localStorage.getItem('arrayOfBook')) || [];
     this.addBtn.addEventListener('click', this.addBook.bind(this));
+    this.mainContainer = document.querySelector('.main-container');
+    // containers
+    this.container = document.querySelector('.list-container');
+    this.formContainer = document.querySelector('.form-container');
+    this.contactContainer = document.querySelector('.contact-container');
+    // nav items
+    this.listShow = document.querySelector('.list-show');
+    this.addNew = document.querySelector('.add-new');
+    this.contact = document.querySelector('.contact');
+    // nav event listeners
+    this.listShow.addEventListener('click', this.showList.bind(this));
+    this.addNew.addEventListener('click', this.showNew.bind(this));
+    this.contact.addEventListener('click', this.showContact.bind(this));
+    this.monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December',
+    ];
   }
+
+  showList() {
+    this.container.classList.add('show');
+    this.formContainer.classList.remove('show');
+    this.contactContainer.classList.remove('show');
+  }
+
+  showNew() {
+    this.formContainer.classList.add('show');
+    this.container.classList.remove('show');
+    this.contactContainer.classList.remove('show');
+  }
+
+  showContact() {
+    this.contactContainer.classList.add('show');
+    this.formContainer.classList.remove('show');
+    this.container.classList.remove('show');
+  }
+//date and time function
+ 
 
   // Remove book function
   removeBook(e) {
@@ -41,6 +77,7 @@ class Book {
       removeBtn.forEach((btn) => {
         btn.addEventListener('click', this.removeBook.bind(this));
       });
+      this.container.classList.add('show');
     });
   }
 
@@ -65,8 +102,10 @@ class Book {
       this.authorInput.value = '';
       localStorage.setItem('arrayOfBook', JSON.stringify(this.arrayOfBooks));
     }
+    this.container.classList.remove('show');
   }
 }
 
 const booklist = new Book();
 window.addEventListener('DOMContentLoaded', booklist.displayBook());
+document.body.addEventListener('onload', booklist.timeDate());
