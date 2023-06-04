@@ -126,7 +126,7 @@ class Book {
         author: authorValue,
       };
       this.listOfbooks.innerHTML = '';
-      this.arrayOfBooks.push(book);
+      this.arrayOfBooks.unshift(book);
       this.displayBook();
       this.titleInput.value = '';
       this.authorInput.value = '';
