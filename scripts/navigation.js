@@ -94,8 +94,7 @@ class Book {
       attr.value = book.id;
       article.setAttributeNode(attr);
       article.innerHTML = ` <div class="title-author-container">
-                                <p class="book-title">"${book.title}" by</p>
-                                <pre class="book-author"> "${book.author}"</pre>
+                                <p class="book-title">"${book.title} by ${book.author}"</p>
                             </div>
                             
                             <button class="remove-btn">Remove</button>
