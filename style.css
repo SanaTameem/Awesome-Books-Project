@@ -7,12 +7,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #FFE5CA;
 }
 
 .date {
   align-self: flex-end;
   font-weight: 600;
   padding: 0 10px;
+  font-size: 20px;
 }
 
 .main-container {
@@ -21,6 +23,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 80px;
 }
 
 .form {
@@ -41,13 +44,20 @@ body {
 
 .add-btn {
   align-self: flex-end;
-  background: none;
-  width: 15%;
-  height: 25px;
+  background: #E74646;
+  color: #fff;
+  width:30%;
+  height: 35px;
   border: 3px solid #000;
   box-shadow: 3px 3px 3px #000;
+  font-size: 18px;
 }
-
+.con-data a {
+  color: #000;
+}
+.con-data a:active {
+  color: #E74646;
+}
 .list-of-books {
   display: none;
   border: 3px solid #000;
@@ -84,9 +94,9 @@ body {
 .remove-btn {
   height: 30px;
   width: 15%;
-  background: none;
+  background-color: #fff;
   border: 2px solid #000;
-  box-shadow: 3px 3px 3px #000;
+  box-shadow: 2px 2px 5px #000;
   font-size: 17px;
   font-weight: 600;
 }
@@ -99,7 +109,8 @@ body {
 }
 
 .book-container:nth-child(odd) {
-  background-color: lightgray;
+  background-color: #FA9884;
+  color: #fff;
 }
 
 .book-container:nth-child(even) {
@@ -114,25 +125,27 @@ body {
 }
 
 .bordered {
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 
 .title-icon {
-  font-size: 18px;
+   font-size: 30px;
   font-weight: 600;
 }
 
 .footer {
   padding: 5px 15px;
-  border: 3px solid #000;
+  background-color: #E74646;
+  /* border: 3px solid #000; */
   width: 98%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 2px;
-  background-color: #fff;
+  color: #fff;
+  /* background-color: #fff; */
 }
 
 .contact-container {
@@ -152,24 +165,91 @@ body {
 }
 
 .navbar {
-  margin: 4px;
+  margin: 0;
   padding: 0 15px;
-  border: 3px solid #000;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #E74646;
+  color: #fff;
 }
 
 .nav-list {
-  width: 20%;
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-item {
   padding: 0 10px;
   font-weight: 600;
   cursor: pointer;
+  align-items: center;
+  font-size: 24px;
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+  .navbar{
+    padding: 0 40px;
+  }
+
+  .list-of-books{
+    width: 85%;
+  }
+  .title-input,
+.author-input{
+  width: 90%;
+}
+.form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show{
+  width: 90%;
+}
+.add-btn{
+  align-self: center;
+}
+}
+
+@media screen and (max-width:768px){
+  .navbar{
+    height: 70px;
+
+  }
+  .title-icon{
+    font-size: 18px;
+  }
+  .nav-item{
+    font-size: 18px;
+  }
+  .date{
+    font-size: 16px;
+  }
+  .title{
+    font-size: 24px;
+  }
+  .list-of-books{
+    width: 95%;
+  }
+  .title-author-container{
+    font-size: 14px;
+    font-weight: 600;
+    width: 80%;
+  }
+  .remove-btn{
+    width: 20%;
+    font-size: 11px
+  }
+  .form{
+    width: 100%;
+  }
+  .contact-data{
+    font-size: 14px;
+    width: 90%;
+  }
 }
