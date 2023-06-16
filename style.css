@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #FFE5CA;
+  background-color: #ffe5ca;
 }
 
 .date {
@@ -44,20 +44,23 @@ body {
 
 .add-btn {
   align-self: flex-end;
-  background: #E74646;
+  background: #e74646;
   color: #fff;
-  width:30%;
+  width: 30%;
   height: 35px;
   border: 3px solid #000;
   box-shadow: 3px 3px 3px #000;
   font-size: 18px;
 }
+
 .con-data a {
   color: #000;
 }
+
 .con-data a:active {
-  color: #E74646;
+  color: #e74646;
 }
+
 .list-of-books {
   display: none;
   border: 3px solid #000;
@@ -109,7 +112,7 @@ body {
 }
 
 .book-container:nth-child(odd) {
-  background-color: #FA9884;
+  background-color: #fa9884;
   color: #fff;
 }
 
@@ -130,13 +133,14 @@ body {
 }
 
 .title-icon {
-   font-size: 30px;
+  font-size: 30px;
   font-weight: 600;
 }
 
 .footer {
   padding: 5px 15px;
-  background-color: #E74646;
+  background-color: #e74646;
+
   /* border: 3px solid #000; */
   width: 98%;
   display: flex;
@@ -145,6 +149,7 @@ body {
   position: fixed;
   bottom: 2px;
   color: #fff;
+
   /* background-color: #fff; */
 }
 
@@ -171,7 +176,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #E74646;
+  background-color: #e74646;
   color: #fff;
 }
 
@@ -190,65 +195,77 @@ body {
   font-size: 24px;
 }
 
-@media screen and (min-width:768px) and (max-width:1024px){
-  .navbar{
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
     padding: 0 40px;
   }
 
-  .list-of-books{
+  .list-of-books {
     width: 85%;
   }
+
   .title-input,
-.author-input{
-  width: 90%;
-}
-.form{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.show{
-  width: 90%;
-}
-.add-btn{
-  align-self: center;
-}
+  .author-input {
+    width: 90%;
+  }
+
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show {
+    width: 90%;
+  }
+
+  .add-btn {
+    align-self: center;
+  }
 }
 
-@media screen and (max-width:768px){
-  .navbar{
+@media screen and (max-width: 768px) {
+  .navbar {
     height: 70px;
+  }
 
-  }
-  .title-icon{
+  .title-icon {
     font-size: 18px;
   }
-  .nav-item{
+
+  .nav-item {
     font-size: 18px;
   }
-  .date{
+
+  .date {
     font-size: 16px;
   }
-  .title{
+
+  .title {
     font-size: 24px;
   }
-  .list-of-books{
+
+  .list-of-books {
     width: 95%;
   }
-  .title-author-container{
+
+  .title-author-container {
     font-size: 14px;
     font-weight: 600;
     width: 80%;
   }
-  .remove-btn{
+
+  .remove-btn {
     width: 20%;
-    font-size: 11px
+    font-size: 11px;
   }
-  .form{
+
+  .form {
     width: 100%;
   }
-  .contact-data{
+
+  .contact-data {
     font-size: 14px;
     width: 90%;
   }
